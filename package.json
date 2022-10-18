@@ -2,7 +2,7 @@
     "name": "pulumi-cloudil-yandex-vpc",
     "main": "bin/index.js",
   "scripts": {
-    "build": "tsc",
+    "postinstall": "tsc",
     "lint": "tslint --project ."
   },
     "devDependencies": {
