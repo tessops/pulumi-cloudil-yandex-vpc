@@ -13,8 +13,8 @@ export interface ZoneList{
 export default class Vpc extends pulumi.ComponentResource {
     vpc: yandex.VpcNetwork
     subnetIds: yandex.VpcSubnet[] = [];
-    private static instance: Vpc;
-    private constructor(vpcName: string, vpcArgs: VpcArgs, opts?: pulumi.ComponentResourceOptions) {
+    // private static instance: Vpc;
+    constructor(vpcName: string, vpcArgs: VpcArgs, opts?: pulumi.ComponentResourceOptions) {
         super("pulumi-contrib:components:YandexVPC", vpcName, {}, opts);
 
         this.vpc = new yandex.VpcNetwork(vpcName.toLowerCase(), {
@@ -42,10 +42,10 @@ export default class Vpc extends pulumi.ComponentResource {
         
     }
 
-    public static getInstance(vpcName: string, vpcArgs: VpcArgs, opts?: pulumi.ComponentResourceOptions): Vpc {
-        if (!Vpc.instance) {
-          Vpc.instance = new Vpc(vpcName, vpcArgs, opts);
-        }
-        return Vpc.instance;
-      }
+    // public static getInstance(vpcName: string, vpcArgs: VpcArgs, opts?: pulumi.ComponentResourceOptions): Vpc {
+    //     if (!Vpc.instance) {
+    //       Vpc.instance = new Vpc(vpcName, vpcArgs, opts);
+    //     }
+    //     return Vpc.instance;
+    //   }
 }
