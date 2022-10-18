@@ -1,5 +1,5 @@
 {
-    "name": "vpc",
+    "name": "pulumi-cloudil-yandex-vpc",
     "main": "index.ts",
     "devDependencies": {
         "@types/node": "^14"
