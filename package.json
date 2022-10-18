@@ -1,6 +1,10 @@
 {
     "name": "pulumi-cloudil-yandex-vpc",
-    "main": "index.ts",
+    "main": "bin/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --project ."
+  },
     "devDependencies": {
         "@types/node": "^14"
     },
